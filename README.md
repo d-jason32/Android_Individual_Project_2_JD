@@ -19,7 +19,7 @@
    
 // If registration is successful return to the previous screen.
     
-Enable login (it doesn’t have to be linked to a database at this stage)
+// Enable login (it doesn’t have to be linked to a database at this stage)
     
 Once users login, you should take them to the game.
     
