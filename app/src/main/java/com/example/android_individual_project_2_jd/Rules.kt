@@ -51,7 +51,7 @@ fun Rules(
 
             Text(
                 text = "1. You will be asked 5 questions.\n\n" +
-                        "2. One question will have multiple choices.\n\n" +
+                        "2. All question will have multiple choices.\n\n" +
                         "3. One question has multiple answers.\n\n" +
                         "4. Choose the answer and submit.\n\n",
 

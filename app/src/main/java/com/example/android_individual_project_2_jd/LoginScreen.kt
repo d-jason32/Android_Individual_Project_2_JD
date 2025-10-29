@@ -4,10 +4,14 @@ import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ElevatedButton
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -61,24 +65,38 @@ fun Login(nav: NavHostController, modifier: Modifier = Modifier) {
                 // Make the font bold
                 fontWeight = FontWeight.Bold)
 
-            TextField(
+
+            OutlinedTextField(
                 value = email,
+                onValueChange = { newText -> email = newText },
+                label = { Text("Enter Email") },
+                placeholder = { Text("Enter Email") },
                 shape = RoundedCornerShape(12.dp),
-                onValueChange = { email = it},
-                label = { Text("Email")}
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedBorderColor = Color.DarkGray,
+                    unfocusedBorderColor = Color.Gray,
+                    focusedTextColor = Color.Black,
+                    unfocusedTextColor = Color.Black
+                ),
+                modifier = Modifier.padding(horizontal = 20.dp)
             )
 
-            TextField(
+            OutlinedTextField(
                 value = password,
+                onValueChange = { newText -> password = newText },
+                label = { Text("Enter password") },
+                placeholder = { Text("Enter password") },
                 shape = RoundedCornerShape(12.dp),
-                onValueChange = { password = it},
-                label = { Text("Password")}
-            )
-            // Button for login
-            ElevatedButton(
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.DarkGray
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedBorderColor = Color.DarkGray,
+                    unfocusedBorderColor = Color.Gray,
+                    focusedTextColor = Color.Black,
+                    unfocusedTextColor = Color.Black
                 ),
+                modifier = Modifier.padding(horizontal = 20.dp)
+            )
+
+            ElevatedButton(
                 onClick = {
                     // All fields must be filled in
                     if (email.isBlank() || password.isBlank()){
@@ -96,19 +114,37 @@ fun Login(nav: NavHostController, modifier: Modifier = Modifier) {
                         nav.navigate("home")
                         Toast.makeText(context, "Successful sign on", Toast.LENGTH_SHORT).show()
                     }
-                }
-            ) {
-                Text("Login")
-            }
-            // Button to go to the register account page
-            ElevatedButton(
+                },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.DarkGray
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
                 ),
-                onClick = { nav.navigate("register") }
+                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 46.dp)
+                    .height(56.dp)
             ) {
-                Text("Don't have an account? Register")
+                Text("Login", fontSize = 18.sp, fontWeight = FontWeight.Bold)
             }
+
+            ElevatedButton(
+                onClick = {
+                    nav.navigate("register")
+                },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
+                ),
+                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 46.dp)
+                    .height(56.dp)
+            ) {
+                Text("Register", fontSize = 18.sp, fontWeight = FontWeight.Bold)
+            }
+
 
         }
 

@@ -68,6 +68,7 @@ fun Finish(
 
             Spacer(modifier = Modifier.height(40.dp))
 
+            PlantPicture()
 
 
             Text(

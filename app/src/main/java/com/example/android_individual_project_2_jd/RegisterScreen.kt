@@ -4,11 +4,16 @@ import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ElevatedButton
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -67,45 +72,106 @@ fun RegisterScreen(nav: NavHostController){
                 fontWeight = FontWeight.Bold
             )
 
-            TextField(
+            OutlinedTextField(
                 value = firstName,
-                shape = RoundedCornerShape(12.dp),
                 onValueChange = { firstName = it },
-                label = { Text("First Name") }
+                label = { Text("First Name") },
+                singleLine = true,
+                shape = RoundedCornerShape(12.dp),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedBorderColor = Color.DarkGray,
+                    unfocusedBorderColor = Color.Gray,
+                    focusedTextColor = Color.Black,
+                    unfocusedTextColor = Color.Black
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 46.dp)
             )
 
-            TextField(
+            OutlinedTextField(
                 value = lastName,
-                shape = RoundedCornerShape(12.dp),
                 onValueChange = { lastName = it },
-                label = { Text("Last Name") }
+                label = { Text("Last Name") },
+                singleLine = true,
+                shape = RoundedCornerShape(12.dp),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedBorderColor = Color.DarkGray,
+                    unfocusedBorderColor = Color.Gray,
+                    focusedTextColor = Color.Black,
+                    unfocusedTextColor = Color.Black
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 46.dp)
             )
 
-            TextField(
+
+
+            OutlinedTextField(
                 value = dob,
-                shape = RoundedCornerShape(12.dp),
                 onValueChange = { dob = it },
-                label = { Text("Date of Birth") }
+                label = { Text("DOB") },
+                singleLine = true,
+                shape = RoundedCornerShape(12.dp),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedBorderColor = Color.DarkGray,
+                    unfocusedBorderColor = Color.Gray,
+                    focusedTextColor = Color.Black,
+                    unfocusedTextColor = Color.Black
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 46.dp)
             )
 
-            TextField(
+
+            OutlinedTextField(
                 value = email,
-                shape = RoundedCornerShape(12.dp),
                 onValueChange = { email = it },
-                label = { Text("Email") }
-            )
-            TextField(
-                value = password,
+                label = { Text("Email") },
+                singleLine = true,
                 shape = RoundedCornerShape(12.dp),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedBorderColor = Color.DarkGray,
+                    unfocusedBorderColor = Color.Gray,
+                    focusedTextColor = Color.Black,
+                    unfocusedTextColor = Color.Black
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 46.dp)
+            )
+
+            OutlinedTextField(
+                value = password,
                 onValueChange = { password = it },
-                label = { Text("Password") }
+                label = { Text("Password") },
+                placeholder = { Text("Enter password") },
+                singleLine = true,
+                shape = RoundedCornerShape(12.dp),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedBorderColor = Color.DarkGray,
+                    unfocusedBorderColor = Color.Gray,
+                    focusedTextColor = Color.Black,
+                    unfocusedTextColor = Color.Black
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 46.dp)
             )
 
             // Button to be able to create your account
             ElevatedButton(
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.DarkGray
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
                 ),
+                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 46.dp)
+                    .height(56.dp),
                 onClick = {
                     if (email.isBlank() || password.isBlank() || dob.isBlank() || firstName.isBlank() || lastName.isBlank()) {
                         Toast.makeText(context, "Fill in all the fields", Toast.LENGTH_SHORT).show()
@@ -153,21 +219,29 @@ fun RegisterScreen(nav: NavHostController){
                             "Successful account creation, go back to log in!",
                             Toast.LENGTH_SHORT
                         ).show()
-                        nav.navigate("login")
+                        nav.navigate("login", )
                     }
                 }
             ) {
-                Text("Create account")
+                Text("Create account",fontSize = 18.sp, fontWeight = FontWeight.Bold)
             }
 
-            // Button to go back to the log in screen if you already have an account
+
             ElevatedButton(
+                onClick = {
+                    nav.navigate("login")
+                },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.DarkGray
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
                 ),
-                onClick = { nav.navigate("login") }
+                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 46.dp)
+                    .height(56.dp)
             ) {
-                Text("Already have an account? Login")
+                Text("Already have an account? Login", fontSize = 18.sp, fontWeight = FontWeight.Bold)
             }
 
         }

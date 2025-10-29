@@ -2,10 +2,15 @@ package com.example.android_individual_project_2_jd
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -49,31 +54,43 @@ fun OnboardingScreen(
             // Add a picture of the logo
             PlantPicture()
 
-            // Adds a button
-            Button(
+            ElevatedButton(
+                onClick =
+                    onContinueClicked
+                ,
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.DarkGray
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
                 ),
+                shape = RoundedCornerShape(12.dp),
                 modifier = Modifier
-                    .padding(vertical = 24.dp),
-                onClick = onContinueClicked,
-
-                ) {
-                Text("Login")
+                    .fillMaxWidth()
+                    .padding(horizontal = 46.dp)
+                    .height(56.dp)
+            ) {
+                Text("Login", fontSize = 18.sp, fontWeight = FontWeight.Bold)
             }
 
-            // Adds a button
-            Button(
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.DarkGray
-                ),
-                modifier = Modifier
-                    .padding(vertical = 24.dp),
-                onClick = onRegisterClicked
+            Spacer(modifier = Modifier.height(40.dp))
 
-                ) {
-                Text("Register")
+
+            ElevatedButton(
+                onClick =
+                    onRegisterClicked
+                ,
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.DarkGray,
+                    contentColor = Color.White
+                ),
+                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 46.dp)
+                    .height(56.dp)
+            ) {
+                Text("Register", fontSize = 18.sp, fontWeight = FontWeight.Bold)
             }
+
         }
     }
 }

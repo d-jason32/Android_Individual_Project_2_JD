@@ -10,21 +10,13 @@
 5. Login Enabled with regex validation!
 6. Once you log in you are taken to the game.
 7. You can either play or read the rules.
+8. Asks five questions.
+9. User asks enters question and can check if they are correct.
+10. Result displayed after the quiz. 
 
 # Tasks
 
- 
-should ask at least five questions.
-    
-Should have at least one question with an answer of format multiple choices.
-    
-Should have at least one question with an answer of format multiple answers.
-    
-Store users' answers and show a confirmation UI before accepting an answer.
-    
-If the answer is confirmed then record it and check if correct, and then move to the next question.
-    
-When the quiz finishes display the result.
+
     
 You should store the data on the phone, so if the user login later should see the history of playing the game and score (use a simple key-value).
     
