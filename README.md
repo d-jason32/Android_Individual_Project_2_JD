@@ -3,19 +3,13 @@
 ### Description: 
 
 ## Features:
-1. Splash Screen and Login Screen
+1. 5 second Splash Screen and 
+2. Login Screen
+3. Register screen with validation
+4. If the registration is successful you go on to the previous screen. 
 
 # Tasks
 
-//    A welcome screen (splash screen) with your app name and a picture.
-    
-// You should then move to a screen that asks the user for either to log in or to register.
-
-// If the user clicks the registration page, the registration page should have fields for at least 'first name', 'family name', 'date of birth', 'email', and a 'password'.
-    
-// Validate that the entered data is not empty.
-    
-// Check that the entered data is correct (such as email validation, the first name should at least 3 char and not more than 30)
    
 // If registration is successful return to the previous screen.
     

@@ -37,7 +37,10 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun OnboardingPreview() {
     Android_Individual_Project_1_JDTheme {
-        OnboardingScreen(onContinueClicked = {})
+        OnboardingScreen(
+            onContinueClicked = {},
+            onRegisterClicked = {},
+        )
     }
 }
 
@@ -79,7 +82,13 @@ fun MyApp(modifier: Modifier = Modifier) {
                 OnboardingScreen(
                     onContinueClicked = {
                         nav.navigate("login") {
-                            popUpTo("onboarding") { inclusive = true }
+
+                        }
+                    },
+
+                    onRegisterClicked = {
+                        nav.navigate("register") {
+
                         }
                     }
                 )
@@ -92,6 +101,10 @@ fun MyApp(modifier: Modifier = Modifier) {
 
             // route for the splash screen
             composable("splashscreen") { SplashScreen(nav) }
+
+            // route for the home page
+            composable("home") { Home(nav) }
+
         }
     }
 }

@@ -93,7 +93,7 @@ fun Login(nav: NavHostController, modifier: Modifier = Modifier) {
                         Toast.makeText(context, "Please enter a valid email", Toast.LENGTH_SHORT).show()
                     }
                     else {
-
+                        nav.navigate("home")
                         Toast.makeText(context, "Successful sign on", Toast.LENGTH_SHORT).show()
                     }
                 }

@@ -16,12 +16,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 
 
 @Composable
 fun Home(
-    // After you click continue you will go to the login screen
-    onContinueClicked: () -> Unit,
+    nav: NavHostController,
     modifier: Modifier = Modifier
 ) {
 
@@ -49,31 +49,7 @@ fun Home(
             // Add a picture of the logo
             PlantPicture()
 
-            // Adds a button
-            Button(
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.DarkGray
-                ),
-                modifier = Modifier
-                    .padding(vertical = 24.dp),
-                onClick = onContinueClicked,
 
-                ) {
-                Text("Login")
-            }
-
-            // Adds a button
-            Button(
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.DarkGray
-                ),
-                modifier = Modifier
-                    .padding(vertical = 24.dp),
-                onClick = onContinueClicked,
-
-                ) {
-                Text("Register")
-            }
         }
     }
 }

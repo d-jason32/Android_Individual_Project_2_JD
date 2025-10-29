@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.sp
 fun OnboardingScreen(
     // After you click continue you will go to the login screen
     onContinueClicked: () -> Unit,
+    onRegisterClicked: () -> Unit,
     modifier: Modifier = Modifier
 ) {
 
@@ -68,7 +69,7 @@ fun OnboardingScreen(
                 ),
                 modifier = Modifier
                     .padding(vertical = 24.dp),
-                onClick = onContinueClicked,
+                onClick = onRegisterClicked
 
                 ) {
                 Text("Register")

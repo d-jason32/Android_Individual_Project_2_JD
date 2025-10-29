@@ -165,7 +165,7 @@ fun RegisterScreen(nav: NavHostController){
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color.DarkGray
                 ),
-                onClick = { nav.popBackStack() }
+                onClick = { nav.navigate("login") }
             ) {
                 Text("Already have an account? Login")
             }
