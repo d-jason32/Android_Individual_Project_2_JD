@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -35,7 +36,7 @@ fun Home(
         ) {
             // Make the font larger
             Text(
-                "Home",
+                "Welcome to the Quiz Game!",
                 // Center the words on the splash screen
                 textAlign = TextAlign.Center,
 
@@ -48,6 +49,26 @@ fun Home(
 
             // Add a picture of the logo
             PlantPicture()
+
+            // Button to go to the register account page
+            ElevatedButton(
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.Red
+                ),
+                onClick = { nav.navigate("register") }
+            ) {
+                Text("PLAY")
+            }
+
+            // Button to go to the register account page
+            ElevatedButton(
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.DarkGray
+                ),
+                onClick = { nav.navigate("rules") }
+            ) {
+                Text("Read the rules!")
+            }
 
 
         }
