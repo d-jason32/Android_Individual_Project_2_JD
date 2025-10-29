@@ -107,7 +107,7 @@ fun Question1(
                         score = Score.myCounter
                         Toast.makeText(context, "Nice, Correct answer!", Toast.LENGTH_SHORT).show()
                     } else {
-                        Toast.makeText(context, "Sorry, Incorrect, try again!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "Sorry, Incorrect try again!", Toast.LENGTH_SHORT).show()
                     }
                 },
                 colors = ButtonDefaults.buttonColors(
@@ -135,6 +135,8 @@ fun Question1(
             ) {
                 Text("Next question", fontSize = 18.sp, fontWeight = FontWeight.Bold)
             }
+
+            Timer()
 
             Spacer(modifier = Modifier.height(24.dp))
         }

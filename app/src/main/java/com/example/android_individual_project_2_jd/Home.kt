@@ -66,7 +66,7 @@ fun Home(
                 Text("PLAY", fontSize = 18.sp, fontWeight = FontWeight.Bold)
             }
 
-            // Button to go to the register account page
+            // Button to go to the rules page
             ElevatedButton(
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color.DarkGray,

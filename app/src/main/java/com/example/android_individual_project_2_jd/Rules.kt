@@ -60,7 +60,7 @@ fun Rules(
                 lineHeight = 22.sp
             )
 
-            // Button to go to the register account page
+            // Button to go to the home page
             ElevatedButton(
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color.DarkGray

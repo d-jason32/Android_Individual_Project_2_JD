@@ -1,6 +1,6 @@
 # CSC 371 Individual Project # 2
 
-### Description: Quiz game with registration and login,
+### Description: Quiz game with registration and login and a timer.
 
 ## Features:
 1. 5 second Splash Screen and 
@@ -13,16 +13,20 @@
 8. Asks five questions.
 9. User asks enters question and can check if they are correct.
 10. Result displayed after the quiz. 
+11. Data is stored.
+12. Includes a timer.
+13. Works on tablets and phones. 
 
-# Tasks
+![img.png](img.png)
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)
+![img_4.png](img_4.png)
+![img_5.png](img_5.png)
+![img_6.png](img_6.png)
+![img_7.png](img_7.png)
+![img_8.png](img_8.png)
+![img_9.png](img_9.png)
+![img_10.png](img_10.png)
 
-
-    
-You should store the data on the phone, so if the user login later should see the history of playing the game and score (use a simple key-value).
-    
-You MUST have a nice design.
-    
-Make sure that you test your app at least on two different devices (phone and tablet) and for portrait and landscape modes.
-
-You need to create a quiz game with registration/login. The focus of this project is for you to create an app with several activities, data validation, passing data between activities, storing data for stats, and the use of a timer.
 

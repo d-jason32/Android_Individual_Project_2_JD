@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.sp
 fun OnboardingScreen(
     // After you click continue you will go to the login screen
     onContinueClicked: () -> Unit,
+    // After you click you will go to the login screen
     onRegisterClicked: () -> Unit,
     modifier: Modifier = Modifier
 ) {

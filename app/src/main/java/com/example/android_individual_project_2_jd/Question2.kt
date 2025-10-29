@@ -136,6 +136,8 @@ fun Question2(
                 Text("Next question", fontSize = 18.sp, fontWeight = FontWeight.Bold)
             }
 
+            Timer()
+
             Spacer(modifier = Modifier.height(24.dp))
         }
     }
