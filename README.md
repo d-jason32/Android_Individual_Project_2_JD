@@ -1,6 +1,6 @@
 # CSC 371 Individual Project # 2
 
-### Description: 
+### Description: Quiz game with registration and login,
 
 ## Features:
 1. 5 second Splash Screen and 
@@ -13,9 +13,7 @@
 
 # Tasks
 
-    
-should have an activity that explains the rules of the game (quiz).
-    
+ 
 should ask at least five questions.
     
 Should have at least one question with an answer of format multiple choices.

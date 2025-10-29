@@ -55,7 +55,7 @@ fun Home(
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color.Red
                 ),
-                onClick = { nav.navigate("register") }
+                onClick = { nav.navigate("question1") }
             ) {
                 Text("PLAY")
             }

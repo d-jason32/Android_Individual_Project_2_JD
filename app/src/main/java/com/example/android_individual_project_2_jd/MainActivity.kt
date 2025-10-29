@@ -105,8 +105,19 @@ fun MyApp(modifier: Modifier = Modifier) {
             // route for the home page
             composable("home") { Home(nav) }
 
-            // route for the home page
+            // route for the rules page
             composable("rules") { Rules(nav) }
+
+            // route for the question1 page
+            composable("question1") { Question1(nav) }
+
+            // route for the question1 page
+            composable("question2") { Question2(nav) }
+            composable("question3") { Question3(nav) }
+            composable("question4") { Question4(nav) }
+            composable("question5") { Question5(nav) }
+            composable("finish") { Finish(nav) }
+
 
         }
     }
