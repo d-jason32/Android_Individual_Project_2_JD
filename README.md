@@ -7,15 +7,12 @@
 2. Login Screen
 3. Register screen with validation
 4. If the registration is successful you go on to the previous screen. 
+5. Login Enabled with regex validation!
+6. Once you log in you are taken to the game.
+7. You can either play or read the rules.
 
 # Tasks
 
-   
-// If registration is successful return to the previous screen.
-    
-// Enable login (it doesn’t have to be linked to a database at this stage)
-    
-Once users login, you should take them to the game.
     
 should have an activity that explains the rules of the game (quiz).
     
@@ -36,3 +33,6 @@ You should store the data on the phone, so if the user login later should see th
 You MUST have a nice design.
     
 Make sure that you test your app at least on two different devices (phone and tablet) and for portrait and landscape modes.
+
+You need to create a quiz game with registration/login. The focus of this project is for you to create an app with several activities, data validation, passing data between activities, storing data for stats, and the use of a timer.
+
